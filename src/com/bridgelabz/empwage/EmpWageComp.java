@@ -15,13 +15,16 @@ public class EmpWageComp {
 		int empHrs = 0;
 		int empwage = 0;
 		double empcheck = Math.floor(Math.random() * 10) % 3;
-		if (empcheck == IS_FULL_TIME) {
+		switch ((int) empcheck) {
+		case 1:
 			System.out.println("Employee is Full time ");
 			empHrs = 8;
-		} else if (empcheck == IS_PART_TIME) {
-			System.out.println("Employee is Part time");
+			break;
+		case 2:
+			System.out.println("Employee is Part time ");
 			empHrs = 4;
-		} else {
+			break;
+		default:
 			System.out.println("Employee is Absent");
 			empHrs = 0;
 		}
